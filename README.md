@@ -13,7 +13,13 @@ Installation is via `composer`
 composer require enanobots/m2-datapatchcreator-simpledata
 ```
 
-After installing the packages just run:
+After installing the packages, enable all modules with:
+
+```
+php bin/magento module:enable Nanobots_DataPatchCreatorSimpleData Nanobots_DataPatchCreator MarkShust_SimpleData
+```
+
+Then run:
 ```
 php bin/magento setup:upgrade
 ```
