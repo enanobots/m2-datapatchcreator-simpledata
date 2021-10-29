@@ -1,0 +1,31 @@
+{
+    "name": "enanobots/m2-datapatchcreator-simpledata",
+    "description": "Magento 2 Data Patch creator - Mark Shust Simple Data Compatibility>",
+    "homepage": "https://github.com/enanobots/m2-datapatchcreator-simpledata",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "email": "nanobotsecommerce@gmail.com",
+            "name": "eCommerce Nanobots"
+        },
+        {
+            "name": "Jakub Winkler",
+            "email": "jwinkler@qsolutionsstudio.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "enanobots/m2-datapatchcreator": "*",
+        "markshust/magento2-module-simpledata": "*"
+    },
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Nanobots\\DataPatchCreatorSimpleData\\": "src/"
+        }
+    }
+}

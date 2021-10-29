@@ -1,0 +1,28 @@
+<?php
+/**
+ * Created with Nanobots_DataPatchCreatorSimpleData
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ *
+ * @category    {{var namespace}}
+ * @package     {{var namespace}}_{{var module}}
+ */
+
+declare(strict_types = 1);
+
+namespace {{var namespace}}\{{var module}}\Setup\Patch\Data;
+
+use MarkShust\SimpleData\Setup\Patch\SimpleDataPatch;
+
+class {{var class}} extends SimpleDataPatch
+{
+    public function apply(): void
+    { {{for configSection in configSections }}
+        $this->config->save(
+            '{{var configSection.path}}',
+            '{{var configSection.value}}',
+            '{{var configSection.scope}}',
+            '{{var configSection.scope_id}}'
+        );{{/for}}
+    }
+}
+
